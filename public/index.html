@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>MEAN SPA</title>
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-material-design.css">
+    <link rel="stylesheet" type="text/css" href="css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="css/smoke.min.css">
+
+
+</head>
+<body style="background-color: #EEEEEE">
+<div class="container" ng-controller="AppCtrl">
+
+        <h1>Contact app <small>CRUD with MEAN Stack RESTful API</small></h1>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-body">
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Number</th>
+        <th>Action</th>
+        <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <input class="form-control" ng-model="contact.name">
+        </td>
+        <td>
+            <input class="form-control" ng-model="contact.email">
+        </td>
+        <td>
+            <input class="form-control"  ng-model="contact.number">
+        </td>
+        <td><button class="btn btn-raised btn-primary" ng-click="addContact()">Add Contact</button></td>
+        <td><button class="btn btn-raised btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;
+        <button class="btn btn-raised btn-default" ng-click="deselect()">Clear</button>
+        </td>
+    </tr>
+    <tr ng-repeat="contact in contactlist">
+    <td>{{contact.name}}</td>
+    <td>{{contact.email}}</td>
+    <td>{{contact.number}}</td>
+        <td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
+        <td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
+    </tr>
+    </tbody>
+</table>
+    </div>
+</div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/material.js"></script>
+<script src="js/ripples.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/smoke.min.js"></script>
+<script src="controllers/controller.js"></script>
+<script>
+    $.material.init()
+</script>
+</body>
+</html>
