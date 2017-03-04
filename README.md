@@ -12,7 +12,7 @@ npm install
 mongod
 
 # run project
-node app
+node server
 
 ```
 
