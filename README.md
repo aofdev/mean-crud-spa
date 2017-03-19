@@ -1,6 +1,6 @@
 # MEAN Stack RESTful API CRUD Single-page application
 
-> MEAN Stack SPA project demo
+> MEAN Stack Single-page application project
 
 ![alt tag](http://i.imgur.com/sljX192.png)
 
